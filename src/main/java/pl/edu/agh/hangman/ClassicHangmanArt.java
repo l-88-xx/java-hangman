@@ -1,8 +1,13 @@
 package pl.edu.agh.hangman;
 
-public class Hangman {
+/**
+ * Klasyczna animacja.
+ * Każda klatka odpowiada kolejnemu błędowi gracza.
+ */
 
-    public static final String[] HANGMANPICS = new String[]{
+public class ClassicHangmanArt implements HangmanArt {
+
+    private static final String[] FRAMES = new String[]{
             "  +---+\n" +
                     "  |   |\n" +
                     "      |\n" +
@@ -54,6 +59,8 @@ public class Hangman {
                     "========"
     };
 
-    public static void main(String[] args) {
+    @Override
+    public String[] getFrames() {
+        return FRAMES;
     }
 }
